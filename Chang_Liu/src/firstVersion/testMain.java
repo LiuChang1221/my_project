@@ -15,9 +15,9 @@ public class testMain {
 		int small_container, big_container;
 		small_container = big_container = 0;//the number of containers
 		double[] Volume_container = {2.59 * 2.43 * 6.06 * small_container, 2.59 * 2.43 * 12.01 * big_container}; //the volume of the both containers
-		ArrayList price = new ArrayList();
-		ArrayList num_small = new ArrayList();
-		ArrayList num_big = new ArrayList();
+		ArrayList<Integer> price = new ArrayList<>();
+		ArrayList<Integer> num_small = new ArrayList<>();
+		ArrayList<Integer> num_big = new ArrayList<>();
 		
 		for(small_container = 0; small_container <= (int)(total_Volume / Volume_container[0]); small_container++) {
 			for(big_container = 0; big_container <= (int)(total_Volume / Volume_container[1]); big_container++) {	
@@ -36,8 +36,8 @@ public class testMain {
 		int m = 0;
 		int least = 1200 * (int)(total_Volume / Volume_container[0])+ 1800 * (int)(total_Volume / Volume_container[1]);
 		for(int i = 0; i < price.size(); i++) {
-			if(least > (int)(price.get(i))) {
-			   least = (int)(price.get(i));
+			if(least > price.get(i)) {
+			   least = price.get(i);
 				m = i;
 			}
 		}
