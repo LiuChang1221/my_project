@@ -19,8 +19,8 @@ public class testMain {
 		ArrayList<Integer> num_small = new ArrayList<>();
 		ArrayList<Integer> num_big = new ArrayList<>();
 		
-		for(small_container = 0; small_container <= (int)(total_Volume / Volume_container[0]); small_container++) {
-			for(big_container = 0; big_container <= (int)(total_Volume / Volume_container[1]); big_container++) {	
+		for(small_container = 0; small_container <= total_Volume / Volume_container[0]; small_container++) {
+			for(big_container = 0; big_container <= total_Volume / Volume_container[1]; big_container++) {	
 				if(Volume_container[0] * small_container + Volume_container[1] * big_container >= total_Volume) {
 					if(total_Weight <= 500) {
 						price.add(small_container * 1000 + big_container * 1800);
